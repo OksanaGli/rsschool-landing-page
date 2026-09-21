@@ -1,0 +1,130 @@
+.coffee-menu {
+  padding-bottom: 98px;
+}
+
+.coffee-menu__title {
+  margin: 0 auto 52px auto;
+  width: 60vw;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1360px;
+  width: 100%;
+  gap: 39px;
+  
+  @include media-laptop {
+    justify-content: center;
+  }  
+
+  @include media-tablet {
+    padding-bottom: 40px;
+  }
+}
+
+.menu__item {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid $color-border;
+  border-radius: 40px;
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--tea {
+    display: none;
+  }
+
+  &--dessert {
+    display: none;
+  }
+
+  &:hover .menu__image {
+    transition: transform 0.8s ease;
+    transform: scale(0.91);
+  }
+
+  @include media-tablet {
+    &:nth-child(n + 5){
+      display: none;
+    }
+  }
+
+  @media (max-width: 375px) {
+    max-width: 82vw;
+  }
+}
+
+.menu__image__container {
+  //width: 310px;
+  height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 40px;
+
+  @media (max-width: 375px) {
+    max-width: 82vw;
+  }
+}
+
+.menu__title {
+  @include font($size: 24px, $height: 30px);
+  margin: 0 0 12px 0;
+}
+
+.menu__item__description {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 196px;
+}
+
+.menu__description {
+  @include font($size: inherit, $height: inherit, $weight: 400);
+  margin: 0 0 12px 0;
+}
+
+.menu__price {
+  @include font($size: 24px, $height: 30px);
+  margin: 0;
+}
+
+.load__button {
+  display: none;
+  position: relative; 
+  width: 60px;
+  height: 60px;
+  background-color: $color-base;
+  border: 1px solid $color-background;
+  border-radius: 100px;
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icons/load.svg);
+    background-repeat: no-repeat;
+  }
+
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

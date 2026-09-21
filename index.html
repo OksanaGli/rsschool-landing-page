@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee-House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/sass/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./src/img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+  
+</head>
+<body class="page__body">
+  <div class="page__container">
+    <header class="page-header">
+      <h1 class="visually-hidden">Coffee House.</h1>
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__image" src="./src/img/logo.svg" width="100" height="60" alt="Logo.">
+      </a>
+      <nav class="page-header__navigation navigation navigation--closed">
+        <ul class="navigation__list reset-list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#favorite">Favorite coffee</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#about">About</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#mobile">Mobile app</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#contact">Contact us</a>
+          </li>
+        </ul>
+        <ul class="theme reset-list">
+          <li class="theme__item">
+            <button class="theme__button theme__button--light" type="button" data-theme="light">
+              <span class="visually-hidden">Light theme</span>
+            </button>
+          </li> 
+          <li class="theme__item">
+            <button class="theme__button theme__button--dark" type="button" data-theme="dark">
+              <span class="visually-hidden">Dark theme</span>
+            </button>
+          </li>
+        </ul>     
+        <a class="page-header__link menu-link" href="menu.html">Menu</a>
+      </nav>      
+      <button class="hamburger" type="button"></button>      
+    </header>
+    <main class="main">
+      <section class="main__header">
+        <div class="hero__container">       
+          <div class="hero">
+            <h2 class="hero__title"><span class="hero__subtitle">Enjoy</span> premium coffee at our charming cafe</h2>
+            <p class="hero__description">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+            <a class="hero__button hero__button--image button" href="menu.html">Menu</a>
+          </div>
+        </div>
+      </section>
+      <section class="favorite" id="favorite">
+        <div class="favorite__container">
+          <h2 class="favorite__title heading">Choose your <span class="subheading">favorite</span> coffee</h2>
+          <div class="slider">
+            <div class="slider__button__container">
+              <button class="slider__button" type="button">
+                <span class="visually-hidden">Previous slider.</span>
+              </button>
+            </div>
+            <div class="slider__container">
+              <div class="slider__item slider__item--current">
+                <img class="slider__image" src="./src/img/frappuccino-desktop-slider.png" width="480" height="480" alt="Frappuccino.">
+                <img class="slider__image--small" src="./src/img/frappuccino-mobile-slider.png" width="348" height="348" alt="Frappuccino.">              
+                <div class="slider__item__description">
+                  <h3 class="slider__subtitle subtitle">S’mores Frappuccino</h3>
+                  <p class="slider__description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                  <p class="slider__price">$5.50</p>
+                </div>
+              </div>
+              <div class="slider__item slider__item--next">
+                <img class="slider__image" src="./src/img/caramel-macchiato-desktop-slider.png" width="480" height="480" alt="Macchiato.">
+                <img class="slider__image--small" src="#" width="348" height="348" alt="Macchiato.">              
+                <div class="slider__item__description">
+                  <h3 class="slider__subtitle subtitle">Caramel Macchiato</h3>
+                  <p class="slider__description">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                  <p class="slider__price">$5.00</p>
+                </div>
+              </div>
+              <div class="slider__item slider__item--next">
+                <img class="slider__image" src="./src/img/ice-coffee-desktop-slider.png" width="480" height="480" alt="Ice coffee.">
+                <img class="slider__image--small" src="#" width="348" height="348" alt="Ice coffee.">              
+                <div class="slider__item__description">
+                  <h3 class="slider__subtitle subtitle">Ice coffee</h3>
+                  <p class="slider__description">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                  <p class="slider__price">$4.50</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__button__container">
+              <button class="slider__button slider__button--next" type="button">
+                <span class="visually-hidden">Next slider.</span>
+              </button> 
+            </div>           
+          </div>          
+          <ul class="favorite__list control reset-list">
+            <li class="control__item">
+              <button class="control__button control__button--current">
+                <span class="visually-hidden">First slider.</span>
+              </button>
+            </li>
+            <li class="control__item">
+              <button class="control__button">
+                <span class="visually-hidden">Second slider.</span>
+              </button>
+            </li>
+            <li class="control__item">
+              <button class="control__button">
+                <span class="visually-hidden">Third slider.</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2 class="about__title heading">Resource is <span class="subheading">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+        <div class="about__container">
+          <div class="about__image__container about__image__container--first">
+            <img class="about__image" src="./src/img/morning-coffe.jpg" width="726" height="726" alt="Morning coffee.">
+          </div>
+          <div class="about__image__container about__image__container--second">
+            <img class="about__image" src="./src/img/work-and-coffee.jpg" width="726" height="726" alt="Work and coffee.">
+          </div>
+          <div class="about__image__container about__image__container--third">
+            <img class="about__image" src="./src/img/cup-of-coffee.jpg" width="726" height="726" alt="Cup of coffee.">
+          </div>
+          <div class="about__image__container about__image__container--fourth">
+            <img class="about__image" src="./src/img/double-coffee.jpg" width="726" height="726" alt="Double coffee.">
+          </div>
+        </div>
+      </section>
+      <section class="mobile-app" id="mobile">
+        <div class="mobile-app__container">
+          <h2 class="mobile-app__title heading"><span class="subheading">Download</span> our apps to start ordering</h2>
+          <p class="mobile-app__description">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+          <div class="mobile-app__button-container">
+            <a class="mobile-app__button button button--bordered" href="#"><span class="button__subtext">Available on the</span><br> App Store</a>
+            <a class="mobile-app__button mobile-app__button--second button button--bordered" href="#"><span class="button__subtext">Available on</span><br> Google Play</a>
+          </div>
+        </div>
+        <div class="mobile-app__image__container">
+          <img class="mobile-app__image" src="./src/img/mobile-phones.png" width="630" height="630" alt="Mobile phones.">
+          <img class="mobile-app__image--small" src="./src/img/mobile-phones-small.png" width="348" height="348" alt="Mobile phones.">
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__social__container">
+        <h2 class="footer__title heading heading--light">Sip, Savor, Smile. <span class="subheading">It’s coffee time!</span></h2>
+        <ul class="footer__social social reset-list">
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">twitter.</span>
+              <svg class="social__icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="social__icon__circle" x="0.5" y="0.5" width="59" height="59" rx="29.5"/>
+                <path d="M41 21.0101C41 21.0101 38.9821 22.2022 37.86 22.5401C37.2577 21.8476 36.4573 21.3567 35.567 21.134C34.6767 20.9112 33.7395 20.9673 32.8821 21.2945C32.0247 21.6218 31.2884 22.2045 30.773 22.9638C30.2575 23.7231 29.9877 24.6224 30 25.5401V26.5401C28.2426 26.5856 26.5013 26.1959 24.931 25.4055C23.3607 24.6151 22.0103 23.4487 21 22.0101C21 22.0101 17 31.0101 26 35.0101C23.9405 36.408 21.4872 37.109 19 37.0101C28 42.0101 39 37.0101 39 25.5101C38.9991 25.2315 38.9723 24.9537 38.92 24.6801C39.9406 23.6735 41 21.0101 41 21.0101Z"  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">instagram.</span>
+              <svg class="social__icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="social__icon__circle" x="0.5" y="0.5" width="59" height="59" rx="29.5"/>
+                <path d="M30 34C32.2091 34 34 32.2091 34 30C34 27.7909 32.2091 26 30 26C27.7909 26 26 27.7909 26 30C26 32.2091 27.7909 34 30 34Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 34V26C21 23.2386 23.2386 21 26 21H34C36.7614 21 39 23.2386 39 26V34C39 36.7614 36.7614 39 34 39H26C23.2386 39 21 36.7614 21 34Z"/>
+                <path d="M35.5 24.51L35.51 24.4989" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>  
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <span class="visually-hidden">facebook</span>
+              <svg class="social__icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="social__icon__circle" x="0.5" y="0.5" width="59" height="59" rx="29.5"/>
+                <path d="M35 20H32C30.6739 20 29.4021 20.5268 28.4645 21.4645C27.5268 22.4021 27 23.6739 27 25V28H24V32H27V40H31V32H34L35 28H31V25C31 24.7348 31.1054 24.4804 31.2929 24.2929C31.4804 24.1054 31.7348 24 32 24H35V20Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>  
+            </a>
+          </li>
+        </ul>
+        </div>
+        <div class="footer__contacts__container contacts" id="contact">
+          <h3 class="contacts__title">Contact us</h3>
+          <a class="contacts__address-link" href="https://maps.app.goo.gl/JZUjcaGPdAabqWSi7" target="_blank">
+            <p class="contacts__address">8558 Green Rd.,  LA</p>
+          </a>          
+          <a class="contacts__phone-link" href="tel:+16035550123" target="_blank">
+            <p class="contacts__phone">+1&nbsp;(603)&nbsp;555&#8209;0123</p>
+          </a>
+          <p class="contacts__time"> Mon-Sat: 9:00 AM &#8209; 23:00 PM</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./src/index.js" type="module"></script>
+</body>
+</html>

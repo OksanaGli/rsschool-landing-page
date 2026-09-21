@@ -1,0 +1,16 @@
+.heading {
+  @include font($size: 60px, $height: 75px);
+  
+   &--light {
+    color: $color-base;
+  }
+
+  @media (max-width: 540px) {
+    @include font($size: 32px, $height: 40px);
+  }
+}
+
+.subheading {
+  @include font($size: inherit, $height: inherit, $style: italic);
+  color: $color-selected-text;
+}

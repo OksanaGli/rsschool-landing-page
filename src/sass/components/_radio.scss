@@ -1,0 +1,98 @@
+.radio {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 49px;
+
+  @media (max-width: 540px) {
+    gap: 8px;
+  }
+
+  @include media-mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.radio__item { 
+
+  &--current {
+    cursor: auto;
+  }
+}
+
+.radio__label {
+  position: relative;
+  background-color: $color-base;
+  border-radius: 100px;
+  border: 1px solid $color-border;
+  padding: 13px 16px 12px 8px;
+  cursor: pointer;
+
+  [data-theme="dark"] & {     
+    background-color: $color-dark-theme;
+    border: 1px solid $color-background;    
+  }
+ 
+  &--checked {
+    color: $color-base;
+    background-color: $color-background;
+    cursor: default; 
+    
+    [data-theme="dark"] & {     
+      background-color: $color-text;
+      border: 1px solid $color-text;  
+    }
+  }
+  
+  &:hover:not(&--checked) {
+    color: $color-base;
+    background-color: $color-background;
+    transition: all .3s ease-out;
+  } 
+  
+  [data-theme="dark"] &:hover:not(&--checked) {
+    background-color: $color-text;
+    border: 1px solid $color-text;
+  }
+}
+
+.radio__description {
+  padding-left: 38px;
+}
+
+.radio__icon {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: $color-border;
+  border-radius: 100px;
+  left: 8px;
+  top: 6px;
+  background-image: url(../img/icons/coffee-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--second {
+    background-image: url(../img/icons/tea-icon.png);
+  }
+
+  &--third {
+    background-image: url(../img/icons/dessert-icon.png);
+  }
+
+  [data-theme="dark"] & {     
+    background-color: $color-dark-theme;      
+  }
+
+  &--theme {
+    [data-theme="dark"] & {     
+      background-color: $color-background;      
+    }
+  }
+}
+
+[data-theme="dark"] .radio__label:hover:not(.radio__label--checked) .radio__icon {
+  background-color: $color-dark-theme;
+  transition: all .3s ease-out;
+}

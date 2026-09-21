@@ -1,0 +1,17 @@
+.control {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.control__button {
+  width: 40px;
+  height: 4px;
+  background-color: $color-border;
+  border-radius: 100px;
+  border: none;
+  
+  &--current {
+    background-color: $color-background;
+  }
+}

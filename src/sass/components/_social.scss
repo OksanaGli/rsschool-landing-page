@@ -1,0 +1,35 @@
+.social {
+  display: flex;
+  gap: 12px;
+
+  @include media-mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+}
+
+.social__icon {
+  stroke: $color-base;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  
+  &:hover {
+    stroke: $color-text;
+    background-color: $color-base;
+    border-radius: 100px;
+    @extend %transition;
+  }
+}
+
+.social__icon__circle {
+  stroke: $color-base;
+}

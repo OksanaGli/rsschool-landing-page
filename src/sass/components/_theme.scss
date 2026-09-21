@@ -1,0 +1,59 @@
+.theme {
+  display: flex;  
+  gap: 8px; 
+  padding: 3px;
+  border: 1px solid $color-border;
+  border-radius: 100px;
+  margin-right: 24px;
+
+  @include media-tablet {
+    margin-right: 0; 
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  &__button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s ease-out;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--light {
+      background-image: url(../img/icons/light.svg);
+    }
+
+    &--dark {
+      background-image: url(../img/icons/moon.svg);
+      
+
+      &:hover {
+        background-color: $color-background;        
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .theme__button {
+    &--light {
+      background-image: url(../img/icons/sun-dark-theme.svg);
+
+      &:hover {
+        background-color: $color-text;        
+      }
+    }
+
+    &--dark {
+      background-image: url(../img/icons/moon-dark-theme.svg);      
+    }      
+  }
+}
